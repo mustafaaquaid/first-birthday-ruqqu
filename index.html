@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Happy Birthday 🎂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Progress dots -->
+  <div class="nav-dots" id="navDots">
+    <span data-target="hero" class="dot active"></span>
+    <span data-target="cake" class="dot"></span>
+    <span data-target="note" class="dot"></span>
+    <span data-target="game" class="dot"></span>
+    <span data-target="finale" class="dot"></span>
+  </div>
+
+  <!-- SECTION 1: HERO -->
+  <section id="hero" class="section hero">
+    <div class="scene">
+      <h1 class="title-3d" id="title3d">
+        <span>H</span><span>a</span><span>p</span><span>p</span><span>y</span>
+        <span class="sp"></span>
+        <span>B</span><span>i</span><span>r</span><span>t</span><span>h</span><span>d</span><span>a</span><span>y</span>
+      </h1>
+      <p class="subtitle" id="subtitleText">Ruqqu, hope your day is as lovely as your smile 🌸✨</p>
+      <div class="scroll-cue">
+        <span>scroll for a little surprise</span>
+        <div class="mouse"><div class="wheel"></div></div>
+      </div>
+    </div>
+    <div class="floating-emojis">
+      <span style="--i:0">🎈</span><span style="--i:1">💖</span><span style="--i:2">✨</span>
+      <span style="--i:3">🎈</span><span style="--i:4">💫</span><span style="--i:5">🌸</span>
+      <span style="--i:6">🎈</span><span style="--i:7">💕</span>
+    </div>
+  </section>
+
+  <!-- SECTION 2: CAKE -->
+  <section id="cake" class="section cake-section">
+    <h2 class="section-title">Make a wish 🕯️</h2>
+    <p class="section-hint" id="cakeHint">Tap each candle to blow it out...</p>
+
+    <div class="cake-wrap">
+      <div class="cake-3d" id="cakeScene">
+        <div class="candle c1" data-candle="1"><span class="flame"></span></div>
+        <div class="candle c2" data-candle="2"><span class="flame"></span></div>
+        <div class="candle c3" data-candle="3"><span class="flame"></span></div>
+
+        <div class="cake-tier tier-top">
+          <div class="icing"></div>
+        </div>
+        <div class="cake-tier tier-bottom">
+          <div class="icing"></div>
+          <div class="sprinkles"></div>
+        </div>
+        <div class="plate"></div>
+      </div>
+    </div>
+
+    <div class="cake-reveal" id="cakeReveal">
+      <p>You don't even need a wish today, the world already got lucky the day you were born. 🥹💗</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: FLIP NOTE -->
+  <section id="note" class="section note-section">
+    <h2 class="section-title">A little note for you 💌</h2>
+    <p class="section-hint">tap the card</p>
+
+    <div class="flip-card" id="flipCard">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="envelope-icon">💌</div>
+          <p>tap to open</p>
+        </div>
+        <div class="flip-card-back">
+          <p id="noteText">
+            We haven't known each other long, but somehow every conversation with you
+            already feels like my favorite part of the day. Today it's all about you,
+            so go be spoiled, laugh loud, and know that somewhere, someone's smiling
+            just thinking about you. Happy Birthday, beautiful. 🌷
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: GAME -->
+  <section id="game" class="section game-section">
+    <h2 class="section-title">Catch the hearts 💗</h2>
+    <p class="section-hint">tap/click the falling hearts before they hit the floor</p>
+
+    <div class="game-hud">
+      <div class="score-box">Score: <span id="score">0</span> / <span id="target">15</span></div>
+      <button id="startGameBtn" class="btn">Start</button>
+    </div>
+
+    <div class="game-canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+      <div class="game-overlay" id="gameOverlay">
+        <p>Press start and catch <strong id="targetLabel">15</strong> hearts to unlock something sweet 👀</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: FINALE -->
+  <section id="finale" class="section finale-section">
+    <canvas id="confettiCanvas"></canvas>
+    <div class="finale-content" id="finaleContent">
+      <div class="lock-state" id="lockState">
+        <p>🔒 Finish the heart game above to unlock your finale message</p>
+      </div>
+      <div class="unlocked-state hidden" id="unlockedState">
+        <h2 class="finale-title">You. Are. Adorable. 🙈</h2>
+        <p class="finale-text">
+          If your cheeks aren't a little pink right now, I haven't done my job. 😌<br><br>
+          We just met, but I already know this much: you're the kind of person that makes
+          ordinary days feel like something worth looking forward to. I hope today is
+          full of cake, laughter, and people who make you feel exactly as special as you are.
+          <br><br>
+          Happy Birthday. I'm really glad I get to know you. 💗
+        </p>
+        <div class="signature">💌 Mustafa Quaid Johar</div>
+      </div>
+    </div>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>
